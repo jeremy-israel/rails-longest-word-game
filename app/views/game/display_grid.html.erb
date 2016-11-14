@@ -1,0 +1,15 @@
+<h1>This is the grid ;-)</h1>
+<p><%= @grid.each { |letter| letter } %></p>
+
+<p>What's your best shot ?</p>
+<form action="/score">
+  <input type="text" id="attempt" name="attempt">
+  <input type="hidden" name="start_time" value="<%=@start_time%>">
+  <input type="hidden" name="grid" value="<%= @grid.join('') %>">
+  <input type="submit" value="GO">
+</form>
+
+
+
+
+
